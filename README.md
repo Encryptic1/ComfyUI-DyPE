@@ -39,11 +39,11 @@ It works by taking advantage of the spectral progression inherent to the diffusi
       <p><sub><i>A simple, single-node integration to patch your FLUX model for high-resolution generation.</i></sub></p>
   </div>
   
-This node provides a seamless, "plug-and-play" integration of DyPE into FLUX-based and Qwen-Image workflows. Two specialized nodes are available: `DyPE for FLUX` for FLUX models and `DyPE for QWEN` for Qwen-Image models, each optimized for their respective architectures.
+This node provides a seamless, "plug-and-play" integration of DyPE into FLUX-based and Qwen-Image workflows. Two specialized nodes are available: `DyPE for FLUX` for FLUX models and `DyPE for Qwen-Image` for Qwen-Image models, each optimized for their respective architectures.
 
 **✨ Key Features:**
 *   **True High-Resolution Generation:** Push FLUX and Qwen-Image models to 4096x4096 and beyond while maintaining global coherence and fine detail.
-*   **Dual Node Support:** Two specialized nodes available - `DyPE for FLUX` and `DyPE for QWEN` - each optimized for their respective architectures.
+*   **Dual Node Support:** Two specialized nodes available - `DyPE for FLUX` and `DyPE for Qwen-Image` - each optimized for their respective architectures.
 *   **Single-Node Integration:** Simply place the appropriate DyPE node after your model loader to patch the model. No complex workflow changes required.
 *   **Full Compatibility:** Works seamlessly with your existing ComfyUI workflows, samplers, schedulers, and other optimization nodes like Self-Attention or quantization.
 *   **Fine-Grained Control:** Exposes key DyPE hyperparameters, allowing you to tune the algorithm's strength and behavior for optimal results at different target resolutions.
@@ -88,7 +88,7 @@ Using the node is straightforward and designed for minimal workflow disruption.
 ### For Qwen-Image Models
 
 1.  **Load Your Qwen-Image Model:** Use a standard `Load Checkpoint` node to load your Qwen-Image model.
-2.  **Add the DyPE Node:** Add the `DyPE for QWEN` node to your graph (found under `model_patches/unet`).
+2.  **Add the DyPE Node:** Add the `DyPE for Qwen-Image` node to your graph (found under `model_patches/unet`).
 3.  **Connect the Model:** Connect the `MODEL` output from your loader to the `model` input of the DyPE node.
 4.  **Set Resolution:** Set the `width` and `height` on the DyPE node to match the resolution of your `Empty Latent Image`.
 5.  **Connect to KSampler:** Use the `MODEL` output from the DyPE node as the input for your `KSampler`.
